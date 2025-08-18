@@ -14,7 +14,7 @@ const Login = () => {
     const handleSubmit = async (e) =>{
       e.preventDefault()
       try{
-        const response = await axios.post("https://note-app-backend.vercel.app/api/auth/login",{ email, password})
+        const response = await axios.post("https://note-app-api-six.vercel.app/api/auth/login",{ email, password})
         console.log(response);
          if(response.data.success){
           login(response.data.user)
